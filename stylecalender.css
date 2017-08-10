@@ -1,0 +1,400 @@
+body{
+    
+    background-color:#C5B358;
+}
+
+nav {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  /*padding: 50px 0;*/
+  /*box-shadow: 0px 5px 0px #dedede;*/
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .8s;
+}
+nav ul li a:hover {
+  color: #D1AD54;
+}
+
+/* SHIFT */
+nav.shift ul li a {
+  position:relative;
+  z-index: 1;
+}
+nav.shift ul li a:hover {
+  color: #D1AD54;
+}
+nav.shift ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #F1C40F;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  color:#D1AD54;
+  transition-duration: 15s;
+}
+
+
+
+
+
+
+body {
+  margin: 0;
+  top: 0;
+  
+  
+  background-image: radial-gradient(#ffffff, rgba(0, 0, 0, 0.2));
+
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container .elemento {
+  min-width: 300px;
+  height: 300px;
+  margin: 10px auto;
+  margin-top:200px;
+}
+
+
+.calendario .cal-header {
+  margin: 5px 5px 10px;
+  font-family: 'Lato', 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+.calendario .cal-row {
+  position: relative;
+  display: block;
+  height: 75px;
+  color: #333;
+  -webkit-transition: all ease 0.9s;
+  transition: all ease 0.9s;
+}
+.calendario .cal-row:hover .badge {
+  width: 100%;
+}
+.calendario .cal-row:hover .date, .calendario .cal-row:hover .info, .calendario .cal-row:hover .info a {
+  color: #f8f8ff;
+}
+.calendario .cal-row .badge {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  margin: 0 0 0 0px;
+  -webkit-transition: .9s ease-in-out;
+  transition: .9s ease-in-out;
+  width: 5px;
+  background-color: #333333;
+}
+.calendario .cal-row .rosso {
+  background-color:#D1AD54;
+}
+.calendario .cal-row .blu {
+  background-color: #D1AD54;
+}
+.calendario .cal-row .verde {
+  background-color: #D1AD54;
+}
+.calendario .cal-row .date, .calendario .cal-row .info {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  -webkit-transition: all ease 0.9s;
+  transition: all ease 0.9s;
+}
+.calendario .cal-row .date {
+  width: 15%;
+  margin: 0 10px 0 10px;
+  font-family: 'Lato', 'Open Sans', sans-serif;
+  text-align: center;
+}
+.calendario .cal-row .date .month {
+  text-transform: uppercase;
+  line-height: 0.5;
+  margin-top: 10px;
+}
+.calendario .cal-row .date .day {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.calendario .cal-row .info {
+  text-align: left;
+}
+.calendario .cal-row .info a {
+  color: #333;
+  text-decoration: none;
+  -webkit-transition: all ease 0.9s;
+  transition: all ease 0.9s;
+}
+.calendario .cal-row .info a:hover {
+  text-decoration: underline;
+}
+.calendario .cal-row .info .info-time, .calendario .cal-row .info .info-loc {
+  font-size: .8em;
+}
+
+
+
+
+
+
+.accordion {
+  width: 100%;
+  max-width: 1080px;
+  height: 250px;
+  overflow: hidden;
+  margin: 50px auto;
+}
+.accordion ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+  /*ul*/
+}
+.accordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 33.33%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.accordion ul li:nth-child(1) {
+  background-image: url("http://www.crainsnewyork.com/apps/pbcsi.dll/storyimage/CN/20160915/TECHNOLOGY/160919928/AR/0/MSG-Networks-score-a-vote-of-confidence-with-Dolan-buy.jpg");
+}
+.accordion ul li:nth-child(2) {
+  background-image: url("https://www.nycgo.com/images/venues/1178/barclays-center-01-bruce-damonte__x_large.jpg");
+}
+.accordion ul li:nth-child(3) {
+  background-image: url("https://www.residentadvisor.net/images/clubs/lg/webster.jpg");
+}
+.accordion ul li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.accordion ul li div a {
+  display: block;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  vertical-align: bottom;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.accordion ul li div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+.accordion ul li div a h2 {
+  font-family: Montserrat, sans-serif;
+  text-overflow: clip;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+}
+.accordion ul li div a p {
+  top: 160px;
+  font-size: 13.5px;
+}
+.accordion ul:hover li {
+  width: 10%;
+}
+.accordion ul:hover li:hover {
+  width: 80%;
+}
+.accordion ul:hover li:hover a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+
+  .accordion {
+    height: auto;
+  }
+  .accordion ul li,
+  .accordion ul li:hover,
+  .accordion ul:hover li,
+  .accordion ul:hover li:hover {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+
+
+.calendario{
+  height:400px;
+  width:auto;
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+.footer #button{
+	width:35px;
+	height:35px;
+	border: #727172 12px solid;
+	border-radius:35px;
+	margin:0 auto;
+	position:relative;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.footer #button:hover{
+	width:35px;
+	height:35px;
+	border: #3A3A3A 12px solid;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	position:relative;
+}
+.footer {
+	bottom:0;
+	left:0;
+	position:fixed;
+    width: 100%;
+    height: 2em;
+    overflow:hidden;
+    margin:0 auto;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	z-index:999;
+}
+.footer:hover {
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	height: 10em;
+}
+.footer #container{
+	margin-top:5px;
+	width:100%;
+height:100%;
+  position:relative;
+  top:0;
+  left:0;
+	background: #3A3A3A;
+}
+.footer #cont{
+  position:relative;
+  top:-45px;
+  right:190px;
+	width:150px;
+	height:auto;
+	margin:0 auto;
+}
+.footer_center{
+	width:500px;
+	float:left;
+  text-align:center;
+}
+.footer h3{
+	font-family: 'Helvetica';
+	font-size: 30px;
+	font-weight: 100;
+	margin-top:70px;
+	margin-left:40px;
+}

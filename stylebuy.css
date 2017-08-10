@@ -1,0 +1,313 @@
+body{
+    
+    background-color:#C5B358;
+}
+
+nav {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  /*padding: 50px 0;*/
+  /*box-shadow: 0px 5px 0px #dedede;*/
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .8s;
+}
+nav ul li a:hover {
+  color: #D1AD54;
+}
+
+/* SHIFT */
+nav.shift ul li a {
+  position:relative;
+  z-index: 1;
+}
+nav.shift ul li a:hover {
+  color: #D1AD54;
+}
+nav.shift ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #F1C40F;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  color:#D1AD54;
+  transition-duration: 15s;
+}
+
+
+
+
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+
+body {
+   
+    
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+p {
+    line-height: 150%;
+}
+
+#portfolio {
+  padding: 20px 0px 50px 0px;
+  position: relative;
+  display: block;
+
+}
+
+.containerContent {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.set_size_section1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: inline-block;
+}
+
+.services_h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#portfolio .folio-list {
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  width: 60%;
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-top: 10px;
+  margin-right: 30px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+figure {
+  margin: 0;
+}
+
+
+#portfolio .folio-list img {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+#portfolio .folio-thumb > h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 3px;
+}
+
+#portfolio .folio-thumb > p {
+    font-family: 'Droid Serif', serif;
+    word-spacing: 1px;
+    text-align: center;
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.img-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    display: block;
+    bottom: 0;
+    left: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    margin: 0;
+    text-align: center;
+    opacity: 0;
+    background-color: #333;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.img-title h5 {
+    color: #fed136;
+    font-family: 'RobotoSlab', serif;
+    text-align: left;
+    font-size: 15.5px;
+    display: block;
+    margin: 60px 10px 10px 20px;
+}
+
+.img-title p {
+    
+    text-align: left;
+    font-family: 'Droid Serif', serif;
+    font-style: italic;
+    margin: 10px 10px 10px 20px;
+    font-size: 12px;
+    display: block;
+}
+
+.gallery-item:hover .img-title {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+     filter: alpha(opacity=90);
+}
+
+.gallery-item {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    display: block;
+    overflow: hidden;
+}
+
+.img-title h5, .img-title p {
+    position: relative;
+    left: -200px;
+    width: 190px;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+.img-title h5 {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+
+.img-title p {
+    -webkit-transition-delay: 400ms;
+    -moz-transition-delay: 400ms;
+    -o-transition-delay: 400ms;
+    -ms-transition-delay: 400ms;
+    transition-delay: 400ms;
+    width: 180px;
+}
+
+.gallery-item:hover img{
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    width: "250px\9";
+    height: "250px\9";
+}
+
+
+.thumbnail folio-thumb{
+  background-color: black;
+  
+}
+
+.folio-list{
+  position:relative;
+  top:55px;
+ 
+}
+

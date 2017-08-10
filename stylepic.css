@@ -1,0 +1,535 @@
+body{
+    
+    background-color:#C5B358;
+}
+
+nav {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  /*padding: 50px 0;*/
+  /*box-shadow: 0px 5px 0px #dedede;*/
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .8s;
+}
+nav ul li a:hover {
+  color: #D1AD54;
+}
+
+/* SHIFT */
+nav.shift ul li a {
+  position:relative;
+  z-index: 1;
+}
+nav.shift ul li a:hover {
+  color: #D1AD54;
+}
+nav.shift ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #F1C40F;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  color:#D1AD54;
+  transition-duration: 15s;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*pic*/
+
+
+h1 {
+  font-size: calc(1em + 4vw);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero {
+  background: #000;
+  color: #fff;
+  padding: 2em;
+  height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  overflow: hidden;
+  top:-500px;
+}
+
+.hero_text {
+  position: relative;
+  z-index: 10;
+}
+
+.hero_skewed--right,
+.hero_skewed--left {
+  top: 0;
+  height: 100%;
+  width: 75%;
+  position: absolute;
+  overflow: hidden;
+  -webkit-animation-name: outer;
+          animation-name: outer;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transform: skew(-20deg, 0deg) translate(0, 0);
+          transform: skew(-20deg, 0deg) translate(0, 0);
+}
+
+@-webkit-keyframes outer {
+  0% {
+    -webkit-transform: skew(-20deg, 0deg) translate(0, 0);
+            transform: skew(-20deg, 0deg) translate(0, 0);
+  }
+  33% {
+    -webkit-transform: skew(-20deg, 0deg) translate(-50px, 0);
+            transform: skew(-20deg, 0deg) translate(-50px, 0);
+  }
+  66% {
+    -webkit-transform: skew(-20deg, 0deg) translate(50px, 0);
+            transform: skew(-20deg, 0deg) translate(50px, 0);
+  }
+  100% {
+    -webkit-transform: skew(-20deg, 0deg) translate(0, 0);
+            transform: skew(-20deg, 0deg) translate(0, 0);
+  }
+}
+
+@keyframes outer {
+  0% {
+    -webkit-transform: skew(-20deg, 0deg) translate(0, 0);
+            transform: skew(-20deg, 0deg) translate(0, 0);
+  }
+  33% {
+    -webkit-transform: skew(-20deg, 0deg) translate(-50px, 0);
+            transform: skew(-20deg, 0deg) translate(-50px, 0);
+  }
+  66% {
+    -webkit-transform: skew(-20deg, 0deg) translate(50px, 0);
+            transform: skew(-20deg, 0deg) translate(50px, 0);
+  }
+  100% {
+    -webkit-transform: skew(-20deg, 0deg) translate(0, 0);
+            transform: skew(-20deg, 0deg) translate(0, 0);
+  }
+}
+.hero_skewed--left {
+  left: -25%;
+}
+
+.hero_skewed--right {
+  right: -25%;
+}
+
+.unskewed--left,
+.unskewed--right {
+  height: 100%;
+  width: 125%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  -webkit-animation-name: inner;
+          animation-name: inner;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transform: skew(20deg, 0deg) translate(0, 0);
+          transform: skew(20deg, 0deg) translate(0, 0);
+}
+
+@-webkit-keyframes inner {
+  0% {
+    -webkit-transform: skew(20deg, 0deg) translate(0, 0);
+            transform: skew(20deg, 0deg) translate(0, 0);
+  }
+  33% {
+    -webkit-transform: skew(20deg, 0deg) translate(50px, 0);
+            transform: skew(20deg, 0deg) translate(50px, 0);
+  }
+  66% {
+    -webkit-transform: skew(20deg, 0deg) translate(-50px, 0);
+            transform: skew(20deg, 0deg) translate(-50px, 0);
+  }
+  100% {
+    -webkit-transform: skew(20deg, 0deg) translate(0, 0);
+            transform: skew(20deg, 0deg) translate(0, 0);
+  }
+}
+
+@keyframes inner {
+  0% {
+    -webkit-transform: skew(20deg, 0deg) translate(0, 0);
+            transform: skew(20deg, 0deg) translate(0, 0);
+  }
+  33% {
+    -webkit-transform: skew(20deg, 0deg) translate(50px, 0);
+            transform: skew(20deg, 0deg) translate(50px, 0);
+  }
+  66% {
+    -webkit-transform: skew(20deg, 0deg) translate(-50px, 0);
+            transform: skew(20deg, 0deg) translate(-50px, 0);
+  }
+  100% {
+    -webkit-transform: skew(20deg, 0deg) translate(0, 0);
+            transform: skew(20deg, 0deg) translate(0, 0);
+  }
+}
+.unskewed--left {
+  background-image: url(http://i.huffpost.com/gen/1088966/images/o-BEYONCE-CONCERT-facebook.jpg);
+  left: 0;
+}
+
+.unskewed--right {
+  background-image: url(http://i.huffpost.com/gen/1354481/images/o-BEYONCE-facebook.jpg);
+  right: 0;
+}
+
+
+
+
+
+
+
+
+/* pic*/
+
+
+body {
+  padding: 30px 0;
+  position: relative;
+}
+
+.gallery {
+  width: 700px;
+  height:600px;
+  margin: auto;
+  border-radius: 3px;
+  
+}
+
+.img-c {
+  width: 200px;
+  height: 200px;
+  float: left;
+  position: relative;
+  
+}
+
+.img-w {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform ease-in-out 300ms;
+}
+
+.img-w img {
+  display: none;
+}
+
+.img-c {
+  transition: width ease 400ms, height ease 350ms, left cubic-bezier(0.4, 0, 0.2, 1) 420ms, top cubic-bezier(0.4, 0, 0.2, 1) 420ms;
+}
+
+.img-c:hover .img-w {
+  transform: scale(1.08);
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+}
+
+.img-c.active {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  z-index: 2;
+}
+
+.img-c.postactive {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.img-c.active.positioned {
+  left: 0 !important;
+  top: 0 !important;
+  transition-delay: 50ms;
+}
+
+
+
+
+.gallery{
+position:relative;
+top:-300px;
+
+}
+
+#ron{
+  margin-left:-90px;
+}
+
+#pop{
+  
+}
+
+#rob{
+  margin-left: 90px;
+}
+
+#bob{
+  margin-top: 360px;
+  margin-left: -90px;
+}
+
+#gum{
+  margin-top: 80px;
+  
+}
+
+#rub{
+  margin-top: 360px;
+  margin-left: 90px
+}
+
+#bun{
+  margin-top: -119px;
+  margin-left: -90px;
+}
+
+#gum{
+  
+}
+
+#bum{
+  margin-top: 160px;
+  margin-left:-1px;
+}
+  
+#gun{
+  margin-top: -119px;
+  margin-left: 90px;
+}
+
+
+
+
+
+
+/*iuhfiuvugvugvuogv*/
+
+
+
+import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+h1 {
+  text-align: center;
+  font-family: Montserrat,sans-serif;
+  color: #333;
+}
+
+.accordion {
+  width: 100%;
+  height: 350px;
+  margin: 150px auto;
+}
+.accordion ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+.accordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 16.666%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
+}
+.accordion ul li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.accordion ul li div a {
+  display: block;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  vertical-align: bottom;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  transition: all 200ms ease;
+}
+.accordion ul li div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+.accordion ul li div a h2 {
+  font-family: Montserrat,sans-serif;
+  text-overflow: clip;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+}
+.accordion ul li div a p {
+  top: 160px;
+  font-size: 13.5px;
+}
+.accordion ul li:nth-child(1) {
+  background-image: url("http://ell.h-cdn.co/assets/16/05/980x490/landscape-1454898659-gettyimages-508987280.jpg");
+filter: grayscale(100%);
+  height:375px;
+  }
+.accordion ul li:nth-child(2) {
+  background-image: url("https://s3.amazonaws.com/ssglobalcdn/performers/wide/beyonce.jpg");
+filter: grayscale(100%);
+  height:375px;
+  }
+.accordion ul li:nth-child(3) {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/0a/cf/e9/0acfe9d7a99e602260f02336390f7b7f.jpg");
+  filter: grayscale(100%);
+  height:375px;
+  }
+.accordion ul li:nth-child(4) {
+  background-image: url("http://img.usmagazine.com/social/beyonce-950c4fa9-4f31-49e0-a207-9eb5dcafd935.jpg");
+  filter: grayscale(100%);
+  height:375px;
+  }
+
+.accordion ul li:nth-child(5) {
+  background-image: url("http://www.thejuicedaily.com/wp-content/uploads/2013/12/beyonce.jpg");
+  filter: grayscale(100%);
+  height:375px;
+  }
+.accordion ul li:nth-child(6) {
+  background-image: url("http://a.abcnews.com/images/Entertainment/GTY_beyonce_jt_160208_16x9_992.jpg");
+  filter: grayscale(100%);
+  height:375px;
+}
+.accordion ul:hover li {
+  width: 8%;
+}
+.accordion ul:hover li:hover {
+  width: 60%;
+  filter: grayscale(0);
+}
+.accordion ul:hover li:hover a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+
+  .accordion {
+    height: 750px;
+  }
+  .accordion ul li, .accordion ul li:hover, .accordion ul:hover li, .accordion ul:hover li:hover {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    -webkit-transition: none;
+    transition: none;
+    
+  }
+}
+.about {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+.about a {
+  color: blue;
+  text-decoration: none;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+
+#acc{
+  position:relative;
+  top:-110px;
+  }
